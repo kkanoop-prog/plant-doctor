@@ -1,0 +1,6 @@
+fastapi[standard]
+tensorflow-cpu==2.13.0
+pillow
+numpy
+python-multipart
+uvicorn
