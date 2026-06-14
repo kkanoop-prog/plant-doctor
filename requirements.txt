@@ -1,5 +1,5 @@
 fastapi[standard]
-tensorflow==2.13.0
+tensorflow
 pillow
 numpy
 python-multipart
