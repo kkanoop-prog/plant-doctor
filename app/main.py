@@ -36,18 +36,19 @@ def load_model():
         try:
             # Avoid loading optimizer state which can cause variable/compatibility issues
             model = tf.keras.models.load_model(MODEL_PATH, compile=False)
-            # Optionally disable some TF optimizations that can trigger LLVM compilation
-            try:
-                tf.config.optimizer.set_experimental_options({'disable_meta_optimizer': True})
-            except Exception:
-                pass
-            global model_loaded
-            model_loaded = True
-            logging.getLogger('uvicorn').info('Model loaded successfully')
-        except Exception as ex:
-            model_loaded = False
-            logging.getLogger('uvicorn').error(f'Model load failed: {ex}')
+        except Exception:
+            import keras as _keras
+            model = _keras.models.load_model(MODEL_PATH, compile=False)
 
+        try:
+            tf.config.optimizer.set_experimental_options({'disable_meta_optimizer': True})
+        except Exception:
+            pass
+
+        global model_loaded
+        model_loaded = True
+        logging.getLogger('uvicorn').info('Model loaded successfully')
+    
     if not class_names:
         with open(LABELS_PATH, "r", encoding="utf-8") as f:
             class_names = [line.strip() for line in f.readlines() if line.strip()]
