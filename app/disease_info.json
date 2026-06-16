@@ -1,0 +1,168 @@
+{
+  "Tomato___Bacterial_spot": {
+    "name": "Bacterial spot",
+    "description": "Small, dark, water-soaked lesions appear on leaves, stems, and fruit.",
+    "prevention": [
+      "Use disease-free seed and transplants",
+      "Rotate crops away from tomatoes",
+      "Avoid overhead irrigation and wet foliage",
+      "Sanitize tools and remove infected plant debris"
+    ],
+    "treatments": [
+      "Copper-based bactericides or bactericidal sprays",
+      "Prune or remove severely infected leaves and fruit",
+      "Improve air circulation in the canopy"
+    ],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  },
+  "Tomato___Early_blight": {
+    "name": "Early blight",
+    "description": "Dark, concentric lesions form on older leaves and stems, causing leaf drop.",
+    "prevention": [
+      "Rotate crops and avoid planting tomatoes after potatoes",
+      "Use resistant varieties when available",
+      "Avoid overhead watering and dense planting",
+      "Mulch soil to reduce splash dispersal"
+    ],
+    "treatments": [
+      "Apply fungicides containing chlorothalonil or mancozeb",
+      "Remove lower leaves when disease appears",
+      "Maintain good plant nutrition and spacing"
+    ],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  },
+  "Tomato___Late_blight": {
+    "name": "Late blight",
+    "description": "Rapidly spreading water-soaked lesions on leaves and fruit, often with white mold on undersides.",
+    "prevention": [
+      "Avoid overhead irrigation and keep foliage dry",
+      "Destroy volunteer tomato and potato plants",
+      "Plant resistant varieties where possible",
+      "Space plants for good air movement"
+    ],
+    "treatments": [
+      "Use approved fungicides on a regular schedule",
+      "Immediately remove and destroy infected plants",
+      "Practice strict sanitation of tools and equipment"
+    ],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  },
+  "Tomato___Leaf_Mold": {
+    "name": "Leaf mold",
+    "description": "Yellow spots on upper leaf surfaces and olive-green fuzzy mold on undersides.",
+    "prevention": [
+      "Provide good air circulation and avoid overcrowding",
+      "Water in the morning to allow foliage to dry",
+      "Use disease-free transplants",
+      "Maintain low humidity in greenhouses and tunnels"
+    ],
+    "treatments": [
+      "Apply fungicides such as copper formulations or chlorothalonil",
+      "Remove infected leaves and dispose of them safely",
+      "Avoid watering the foliage directly"
+    ],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "name": "Septoria leaf spot",
+    "description": "Small, circular spots with dark margins and light centers appear on lower leaves.",
+    "prevention": [
+      "Rotate crops and avoid planting in infected soil",
+      "Mulch around plants to limit soil splash",
+      "Space plants for airflow",
+      "Remove and destroy infected leaves"
+    ],
+    "treatments": [
+      "Use fungicides labeled for Septoria leaf spot",
+      "Practice good sanitation by removing debris",
+      "Keep lower foliage dry"
+    ],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "name": "Spider mites (Two-spotted spider mite)",
+    "description": "Fine webbing and tiny yellow or bronze speckles appear on leaves, causing leaf bronzing and drop.",
+    "prevention": [
+      "Maintain adequate humidity and avoid plant stress",
+      "Inspect plants regularly for early mite activity",
+      "Encourage natural predators like predatory mites",
+      "Keep greenhouse and production areas clean"
+    ],
+    "treatments": [
+      "Use miticides approved for tomato crops",
+      "Apply insecticidal soaps or horticultural oils",
+      "Rinse leaves with strong water spray to reduce mite populations"
+    ],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  },
+  "Tomato___Target_Spot": {
+    "name": "Target spot",
+    "description": "Brown to tan lesions with a yellow halo appear on leaves and may spread rapidly.",
+    "prevention": [
+      "Rotate crops and remove plant debris",
+      "Avoid overhead irrigation",
+      "Space plants to increase airflow",
+      "Use resistant varieties if available"
+    ],
+    "treatments": [
+      "Apply registered fungicides on a labeled schedule",
+      "Remove severely infected foliage",
+      "Practice good field sanitation"
+    ],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "name": "Tomato yellow leaf curl virus",
+    "description": "Leaves curl upward, turn yellow, and stunted growth occurs; fruit yield drops sharply.",
+    "prevention": [
+      "Use resistant or tolerant varieties",
+      "Control whitefly vectors with screens or treatments",
+      "Remove infected plants promptly",
+      "Avoid planting near infected crops"
+    ],
+    "treatments": [
+      "No cure exists; remove infected plants",
+      "Manage whiteflies with insecticides or biological controls",
+      "Use healthy transplants and barrier screens"
+    ],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "name": "Tomato mosaic virus",
+    "description": "Mottled light and dark green leaf patterns, stunted plants, and reduced fruit quality.",
+    "prevention": [
+      "Use virus-free seed and transplants",
+      "Sanitize tools and hands between plants",
+      "Remove infected plants immediately",
+      "Avoid tobacco products while handling tomatoes"
+    ],
+    "treatments": [
+      "No chemical cure; rogue infected plants",
+      "Maintain strict sanitation practices",
+      "Use resistant varieties when available"
+    ],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  },
+  "Tomato___healthy": {
+    "name": "Healthy",
+    "description": "No disease detected; the plant appears healthy and free of major symptoms.",
+    "prevention": [
+      "Continue good cultural practices",
+      "Maintain proper watering and nutrition",
+      "Monitor regularly for pests and disease",
+      "Use good sanitation and crop rotation"
+    ],
+    "treatments": [],
+    "source": "Local agronomy guide",
+    "last_updated": "2026-06-16"
+  }
+}
