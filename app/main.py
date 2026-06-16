@@ -5,6 +5,7 @@ from PIL import Image
 import io
 import os
 import logging
+import json
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 app = FastAPI(title="PlantVillage Model API", version="1.0.0")
 
@@ -13,6 +14,9 @@ LABELS_PATH = "app/labels.txt"
 IMG_SIZE = 224
 
 model = None
+DISEASE_INFO_PATH = "app/disease_info.json"
+
+disease_info = {}
 class_names = []
 tf = None
 preprocess_input = None
@@ -20,7 +24,7 @@ model_loaded = False
 
 @app.on_event("startup")
 def load_model():
-    global model, class_names, tf, preprocess_input
+    global model, class_names, tf, preprocess_input, disease_info
     # Set environment flags before importing TensorFlow to avoid LLVM/oneDNN/XLA issues
     os.environ.setdefault('TF_CPP_MIN_LOG_LEVEL', '3')
     os.environ.setdefault('TF_ENABLE_ONEDNN_OPTS', '0')
@@ -52,6 +56,12 @@ def load_model():
     if not class_names:
         with open(LABELS_PATH, "r", encoding="utf-8") as f:
             class_names = [line.strip() for line in f.readlines() if line.strip()]
+    # Load disease info mapping (optional)
+    try:
+        with open(DISEASE_INFO_PATH, "r", encoding="utf-8") as f:
+            disease_info = json.load(f)
+    except Exception:
+        disease_info = {}
 
 
 def preprocess_image(image_bytes: bytes):
@@ -92,10 +102,19 @@ async def predict(file: UploadFile = File(...)):
             for i in top3_indices
         ]
 
+        info = disease_info.get(predicted_label, {
+            "name": predicted_label,
+            "description": "",
+            "prevention": [],
+            "treatments": [],
+            "source": None
+        })
+
         return JSONResponse({
             "predicted_class": predicted_label,
             "confidence": confidence,
-            "top_3_predictions": top3
+            "top_3_predictions": top3,
+            "disease_info": info
         })
 
     except Exception as ex:
